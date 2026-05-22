@@ -3,8 +3,9 @@ const path = require('path');
 const sharp = require('sharp');
 
 const src = path.resolve(__dirname, '..', 'public', 'socialventure.jpg');
-const backup = path.resolve(__dirname, '..', 'public', `socialventure.backup.${Date.now()}.jpg`);
-const tmp = path.resolve(__dirname, '..', 'public', 'socialventure.tmp.jpg');
+const backupsDir = path.resolve(__dirname, '..', 'backups');
+const backup = path.resolve(backupsDir, `socialventure.backup.${Date.now()}.jpg`);
+const tmp = path.resolve(__dirname, '..', 'scripts', 'socialventure.tmp.jpg');
 
 (async () => {
   try {
@@ -13,7 +14,8 @@ const tmp = path.resolve(__dirname, '..', 'public', 'socialventure.tmp.jpg');
       process.exit(1);
     }
 
-    // backup
+    // ensure backups directory exists and create backup outside `public`
+    fs.mkdirSync(backupsDir, { recursive: true });
     fs.copyFileSync(src, backup);
     console.log('Backup created:', backup);
 

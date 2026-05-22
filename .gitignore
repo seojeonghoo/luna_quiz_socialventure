@@ -1,0 +1,8 @@
+node_modules/
+dist/
+/.wrangler/
+backups/
+public/socialventure.tmp.jpg
+scripts/socialventure.tmp.jpg
+*.log
+.DS_Store
