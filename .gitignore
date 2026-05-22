@@ -6,3 +6,8 @@ public/socialventure.tmp.jpg
 scripts/socialventure.tmp.jpg
 *.log
 .DS_Store
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

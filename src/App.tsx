@@ -630,7 +630,7 @@ function App() {
                 <button className="modal-close" type="button" onClick={closeImageModal}>
                   닫기
                 </button>
-                {/* socialventure.png를 다른 파일명으로 바꿀 때는 SOCIAL_VENTURE_IMAGE 상수만 수정하세요. */}
+                {/* socialventure.jpg를 다른 파일명으로 바꿀 때는 SOCIAL_VENTURE_IMAGE 상수만 수정하세요. */}
                 <img src={SOCIAL_VENTURE_IMAGE} alt="소셜벤처 소개 자료" />
               </motion.div>
             </motion.div>

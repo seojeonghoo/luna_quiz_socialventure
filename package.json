@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "cmd /c \"npm run build && npx wrangler pages deploy dist --project-name luna-social-venture-quiz --branch main --commit-dirty true || exit /b 0\""
+    "deploy": "npm run build && wrangler pages deploy dist --project-name luna-social-venture-quiz --branch main --commit-dirty true"
   },
   "dependencies": {
     "framer-motion": "^12.12.1",
@@ -15,7 +15,6 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.37.3",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.4.1",
